@@ -22,7 +22,7 @@ function MessageInput({ roomId }) {
                 .catch(error => {
                     console.error('Error:', error);
                 });
-        }, 86400000);
+        }, 60000);
         return () => clearInterval(intervalId);
     }, [url]);
 
