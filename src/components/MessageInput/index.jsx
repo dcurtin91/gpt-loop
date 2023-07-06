@@ -12,18 +12,15 @@ function MessageInput({ roomId }) {
 
 
     useEffect(() => {
-        const intervalId = setInterval(() => {
-            fetch(url)
-                .then(response => response.json())
-                .then(data => {
-                    const chatResponse = data.chatResponse;
-                    setChatResponse(chatResponse);
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                });
-        }, 60000);
-        return () => clearInterval(intervalId);
+        fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                const chatResponse = data.chatResponse;
+                setChatResponse(chatResponse);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
     }, [url]);
 
     useEffect(() => {
