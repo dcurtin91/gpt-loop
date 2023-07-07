@@ -7,6 +7,7 @@ function MessageInput({ roomId }) {
     const { user } = useAuth();
     // const url = process.env.NODE_ENV === 'production' ? 'https://gpt-loop-server.herokuapp.com/' : 'http://localhost:5000/';
     const url = 'https://gpt-loop-server.herokuapp.com/';
+    
 
     const [chatResponse, setChatResponse] = useState('');
 
